@@ -59,7 +59,7 @@ npx cap sync
 ### Android — add the plugin files
 
 1. Copy `plugins/android/BoyGamesNativePlugin.kt` to
-   `android/app/src/main/java/si/lukezhang/boygames/getclocked/BoyGamesNativePlugin.kt`
+   `android/app/src/main/java/com/butterworks/getclocked/BoyGamesNativePlugin.kt`
    (the `package` line must match the `appId` in `capacitor.config.ts`).
 2. In `android/app/src/main/java/.../MainActivity.java` (or `.kt`):
    ```java

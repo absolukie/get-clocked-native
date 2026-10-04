@@ -10,7 +10,7 @@
 //
 // SETUP (Android Studio, any machine):
 //   1. Copy this file to
-//      android/app/src/main/java/si/lukezhang/boygames/getclocked/BoyGamesNativePlugin.kt
+//      android/app/src/main/java/com/butterworks/getclocked/BoyGamesNativePlugin.kt
 //      (package MUST match the appId in capacitor.config.ts).
 //   2. In android/app/src/main/java/.../MainActivity.java (or .kt), register it:
 //        import com.butterworks.getclocked.BoyGamesNativePlugin;
