@@ -13,7 +13,7 @@
 //      android/app/src/main/java/si/lukezhang/boygames/getclocked/BoyGamesNativePlugin.kt
 //      (package MUST match the appId in capacitor.config.ts).
 //   2. In android/app/src/main/java/.../MainActivity.java (or .kt), register it:
-//        import si.lukezhang.boygames.getclocked.BoyGamesNativePlugin;
+//        import com.butterworks.getclocked.BoyGamesNativePlugin;
 //        ...
 //        @Override public void onCreate(Bundle savedInstanceState) {
 //            registerPlugin(BoyGamesNativePlugin.class);
@@ -30,7 +30,7 @@
 // compiled on this machine (no Android SDK here). First Gradle build on your
 // machine is the real check.
 
-package si.lukezhang.boygames.getclocked
+package com.butterworks.getclocked
 
 import android.os.Build
 import android.os.VibrationEffect

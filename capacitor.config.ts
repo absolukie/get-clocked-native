@@ -6,7 +6,7 @@ const config: CapacitorConfig = {
   // `package` line — they must all match.
   // (The Store product ID boygames.getclocked.remove_ads is separate and
   // stays exactly as-is; see README "Store products".)
-  appId: 'si.lukezhang.boygames.getclocked',
+  appId: 'com.butterworks.getclocked',
   appName: 'Get Clocked',
   webDir: 'web',
   server: {

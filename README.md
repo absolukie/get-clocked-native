@@ -51,7 +51,7 @@ npx cap sync
    - `plugins/native-bridge-shim.js` (lands in Copy Bundle Resources —
      the plugin injects it into the WKWebView at document-start)
 3. **Signing & Capabilities** → select your Team; verify the Bundle
-   Identifier is `si.lukezhang.boygames.getclocked` (matches
+   Identifier is `com.butterworks.getclocked` (matches
    `capacitor.config.ts` → `appId`).
 4. Build & run on a device (StoreKit needs a real device or a
    StoreKit Configuration file — see below).
@@ -63,7 +63,7 @@ npx cap sync
    (the `package` line must match the `appId` in `capacitor.config.ts`).
 2. In `android/app/src/main/java/.../MainActivity.java` (or `.kt`):
    ```java
-   import si.lukezhang.boygames.getclocked.BoyGamesNativePlugin;
+   import com.butterworks.getclocked.BoyGamesNativePlugin;
    // ...
    @Override
    public void onCreate(Bundle savedInstanceState) {
@@ -93,7 +93,7 @@ Do these in the consoles; nothing here is automated.
 ### App Store Connect (iOS)
 
 1. App Store Connect → **My Apps → +** → New App → iOS, name "Get Clocked",
-   Bundle ID `si.lukezhang.boygames.getclocked`, SKU anything (e.g.
+   Bundle ID `com.butterworks.getclocked`, SKU anything (e.g.
    `getclocked-ios`).
 2. **In-App Purchases → +** → **Non-Consumable** → Product ID exactly:
    `boygames.getclocked.remove_ads`
@@ -108,7 +108,7 @@ Do these in the consoles; nothing here is automated.
 ### Google Play Console (Android)
 
 1. Play Console → **Create app** → name "Get Clocked", package
-   `si.lukezhang.boygames.getclocked`.
+   `com.butterworks.getclocked`.
 2. **Monetize → In-app products → Create product** → Product ID exactly:
    `boygames.getclocked.remove_ads` → one-time (non-consumable) →
    **$2.99**. Activate it.
@@ -152,7 +152,7 @@ Note the ads kill switch stays off by default (see website repo
 
 | Path | What |
 |---|---|
-| `capacitor.config.ts` | appId `si.lukezhang.boygames.getclocked`, webDir `web` |
+| `capacitor.config.ts` | appId `com.butterworks.getclocked`, webDir `web` |
 | `package.json` | Capacitor 7 deps, `sync-web` / `open-ios` / `open-android` scripts |
 | `sync-web.sh` | Re-copies the site into `web/` + injects the bridge `<script>` tag |
 | `web/` | Snapshot of the site (regenerated — don't hand-edit) |
