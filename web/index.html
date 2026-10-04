@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GET CLOCKED — Rank it. Pass it. Clock it.</title>
+<meta name="description" content="GET CLOCKED: the pass-and-play party game. Rank it. Pass it. Clock it.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#16121f">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app"><main id="screen"></main></div>
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ads.js"></script>
+<script src="js/haptics.js"></script>
+<script src="js/native-bridge.js"></script>
+<script src="js/app.js"></script>
+<script src="js/game.js"></script>
+<script>
+/* Offline shell: cache the app so pass-and-play works with no connection.
+ * Guarded — plain http(s) only, so the Capacitor wrapper and file:// are unaffected. */
+if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js").catch(function () { /* offline is best-effort */ });
+  });
+}
+</script>
+</body>
+</html>
