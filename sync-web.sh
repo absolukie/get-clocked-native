@@ -10,7 +10,8 @@ DEST="$ROOT/web"
 
 rm -rf "$DEST"
 mkdir -p "$DEST/js" "$DEST/css"
-cp "$SITE_DIR/index.html" "$SITE_DIR/favicon.svg" "$SITE_DIR/manifest.json" "$SITE_DIR/config.json" "$DEST/"
+cp "$SITE_DIR/index.html" "$SITE_DIR/favicon.svg" "$SITE_DIR/manifest.json" "$SITE_DIR/config.json" \
+   "$SITE_DIR/privacy.html" "$SITE_DIR/terms.html" "$DEST/"
 cp "$SITE_DIR/css/"*.css "$DEST/css/"
 cp "$SITE_DIR/js/"*.js "$DEST/js/"
 

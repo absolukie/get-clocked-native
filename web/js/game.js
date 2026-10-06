@@ -765,6 +765,17 @@ GC.Game = (function () {
         b));
     })();
 
+    /* ---------- Terms of Service ---------- */
+    (function () {
+      var b = document.createElement("button");
+      b.className = "btn ghost small";
+      b.textContent = "Open →";
+      b.onclick = function () { GC.sfx.tap(); window.open("terms.html", "_blank", "noopener"); };
+      el.appendChild(GC.ui.setrow("📜 Terms of Service",
+        "The rules of the game. Spoiler: play nice.",
+        b));
+    })();
+
     /* ---------- Remove Ads (only shown when ads are enabled and not owned) ---------- */
     (function () {
       var BGW = window.BoyGames;

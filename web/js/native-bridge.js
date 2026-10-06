@@ -37,10 +37,12 @@
       getProducts: function () {
         return call("getProducts").then(function (r) { return (r && r.products) || []; });
       },
-      /* -> Promise<{owned: bool}> — cancel/pending resolves {owned:false}, never throws */
+      /* -> Promise<{owned: bool}> — cancel/pending/error resolves {owned:false}, never throws.
+         (iOS rejects on StoreKit errors; normalize here so both platforms behave identically.) */
       purchase: function (productId) {
         return call("purchase", { productId: productId })
-          .then(function (r) { return { owned: !!(r && r.owned) }; });
+          .then(function (r) { return { owned: !!(r && r.owned) }; })
+          .catch(function () { return { owned: false }; });
       },
       /* -> Promise<{ownedIds: string[]}> */
       restore: function () {
